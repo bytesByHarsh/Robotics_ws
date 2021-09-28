@@ -1,0 +1,345 @@
+<?xml version='1.0'?>
+
+<robot name="atom" xmlns:xacro="http://www.ros.org/wiki/xacro">
+	<xacro:property name="robot_name" value="atom" />
+	<xacro:property name="robot_chassis_mass" value="15"/>
+	<xacro:property name="robot_chassis_length" value="0.2"/>
+	<xacro:property name="robot_chassis_radius" value="0.25"/>
+	<xacro:property name="robot_caster_wheel_radius" value="0.05"/>
+	<xacro:property name="robot_caster_wheel_radius_collision" value="0.0499"/>
+
+	<xacro:property name="robot_wheel_mass" value="5"/>
+	<xacro:property name="robot_wheel_length" value="0.05"/>
+	<xacro:property name="robot_wheel_radius" value="0.1"/>
+
+	<xacro:property name="camera_mass" value="0.1"/>
+	<xacro:property name="hokoyu_mass" value="1e-5"/>
+
+	<!-- Make Chassis of Bot -->
+	<link name="chassis">
+		<pose>0 0 0.1 0 0 0</pose>
+
+		<inertial>
+			<mass value="${robot_chassis_mass}"/>
+      		<origin xyz="0.0 0 0" rpy=" 0 0 0"/>
+
+      		<inertia 
+      			ixx="0.147116667" ixy="0" ixz="0"
+      			iyy="0.334951167" iyz="0"
+      			izz="0.3978345"
+      		/>
+		</inertial>
+
+		<collision name="collision">
+			<origin xyz="0 0 0.05" rpy=" 0 0 0"/>
+			<geometry>
+				<box size="0.5 0.5 0.2"/>
+			</geometry>
+		</collision>
+
+		<visual name="chassis_visual">
+			<origin xyz="0 0 0.05" rpy=" 0 0 0"/>
+			<geometry>
+				<box size="0.5 0.5 0.2"/>
+			</geometry>
+
+		</visual>
+
+	</link>
+
+
+	<!-- Right Wheel Back -->
+	<link name="right_wheel_back">
+		<inertial>
+			<mass value="${robot_wheel_mass}"/>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<inertia
+				ixx="0.1" ixy="0.0" ixz="0.0"
+				iyy="0.1" iyz="0.0"
+				izz="0.1"
+			/>
+		</inertial>
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</collision>
+
+	</link>
+
+	<!-- Right Wheel Front-->
+	<link name="right_wheel_front">
+		<inertial>
+			<mass value="${robot_wheel_mass}"/>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<inertia
+				ixx="0.1" ixy="0.0" ixz="0.0"
+				iyy="0.1" iyz="0.0"
+				izz="0.1"
+			/>
+		</inertial>
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</collision>
+
+	</link>
+
+
+
+	<!-- Left wheel Back-->
+	<link name="left_wheel_back">
+		<inertial>
+			<mass value="${robot_wheel_mass}"/>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<inertia
+				ixx="0.1" ixy="0.0" ixz="0.0"
+				iyy="0.1" iyz="0.0"
+				izz="0.1"
+			/>
+		</inertial>
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</collision>
+
+	</link>
+
+	<!-- Left wheel Front-->
+	<link name="left_wheel_front">
+		<inertial>
+			<mass value="${robot_wheel_mass}"/>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<inertia
+				ixx="0.1" ixy="0.0" ixz="0.0"
+				iyy="0.1" iyz="0.0"
+				izz="0.1"
+			/>
+		</inertial>
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+			<geometry>
+				<cylinder radius="${robot_wheel_radius}" length="${robot_wheel_length}"/>
+			</geometry>
+		</collision>
+
+	</link>
+
+	<!-- Camera -->
+	<link name="camera">
+		<inertial>
+			<mass value="${camera_mass}"/>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<inertia
+		        ixx="1e-6" ixy="0.0" ixz="0.0"
+		        iyy="1e-6" iyz="0.0"
+		        izz="1e-6"
+		      />
+		</inertial>
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.05 0.05 0.05"/>
+			</geometry>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.05 0.05 0.05"/>
+			</geometry>
+		</collision>
+	</link>
+
+	<!-- Hokuyo Lidar -->
+	<link name="hokuyo">
+		<inertial>
+			<mass value="${hokoyu_mass}"/>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+
+			<inertia
+		        ixx="1e-6" ixy="0.0" ixz="0.0"
+		        iyy="1e-6" iyz="0.0"
+		        izz="1e-6"
+		      />
+		</inertial>
+
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://atom/meshes/hokuyo.dae"/>
+			</geometry>
+		</visual>
+
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.1 0.1 0.1"/>
+			</geometry>
+		</collision>
+	</link>
+
+	<!-- Project center to the ground -->
+	<link name="robot_footprint"></link>
+
+
+
+	<!-- Define Joints -->
+
+	<!-- Right Wheel Joint Back-->
+	<joint type="continuous" name="right_wheel_hinge_back">
+	    <origin xyz="-0.2 -0.30 0" rpy="0 0 0" />
+	    <parent link="chassis"/>
+	    <child link="right_wheel_back" />
+	    <axis xyz="0 1 0" rpy="0 0 0" />
+	    <limit effort="10000" velocity="1000" />
+	    <dynamics damping="1.0" friction="1.0" />
+	</joint>
+
+	<!-- Right Wheel Joint Front-->
+	<joint type="continuous" name="right_wheel_hinge_front">
+	    <origin xyz="0.2 -0.30 0" rpy="0 0 0" />
+	    <parent link="chassis"/>
+	    <child link="right_wheel_front" />
+	    <axis xyz="0 1 0" rpy="0 0 0" />
+	    <limit effort="10000" velocity="1000" />
+	    <dynamics damping="1.0" friction="1.0" />
+	</joint>
+
+
+	<!-- Left Wheel Joint Back-->
+	<joint type="continuous" name="left_wheel_hinge_back">
+	    <origin xyz="-0.2 0.30 0" rpy="0 0 0" />
+	    <parent link="chassis"/>
+	    <child link="left_wheel_back" />
+	    <axis xyz="0 1 0" rpy="0 0 0" />
+	    <limit effort="10000" velocity="1000" />
+	    <dynamics damping="1.0" friction="1.0" />
+	</joint>
+
+	<!-- Left Wheel Joint Front-->
+	<joint type="continuous" name="left_wheel_hinge_front">
+	    <origin xyz="0.2 0.30 0" rpy="0 0 0" />
+	    <parent link="chassis"/>
+	    <child link="left_wheel_front" />
+	    <axis xyz="0 1 0" rpy="0 0 0" />
+	    <limit effort="10000" velocity="1000" />
+	    <dynamics damping="1.0" friction="1.0" />
+	</joint>
+
+	<!-- Camera Joint -->
+	<joint name="camera_joint" type="fixed">
+		<origin xyz="0.26 0 0" rpy="0 0 0" />
+		<parent link="chassis"/>
+		<child link="camera" />
+		<axis xyz="0 1 0"/>
+	</joint>
+
+	<!-- Hokoyu Joint -->
+	<joint name="hokuyo_joint" type="fixed">
+	    <origin xyz="0.2 0 0.2" rpy="0 0 0" />
+	    <parent link="chassis"/>
+	    <child link="hokuyo" />  
+	    <axis xyz="0 1 0"/> 
+	</joint>
+
+	<joint name="robot_footprint_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<parent link="robot_footprint"/>
+		<child link="chassis" />
+	</joint>
+
+
+	<!-- Color of bot -->
+	<gazebo reference="left_wheel_front">
+		<material>Gazebo/Green</material>
+		<kp>1000000.0</kp> <!-- kp and kd for rubber -->
+		<kd>100.0</kd>
+		<mu1>1.0</mu1>
+		<mu2>1.0</mu2>
+		<maxVel>1.0</maxVel>
+		<minDepth>0.00</minDepth>
+	</gazebo>
+
+	<gazebo reference="left_wheel_back">
+		<material>Gazebo/Green</material>
+		<kp>1000000.0</kp> <!-- kp and kd for rubber -->
+		<kd>100.0</kd>
+		<mu1>1.0</mu1>
+		<mu2>1.0</mu2>
+		<maxVel>1.0</maxVel>
+		<minDepth>0.00</minDepth>
+	</gazebo>
+
+	<gazebo reference="right_wheel_front">
+		<material>Gazebo/Green</material>
+		<kp>1000000.0</kp> <!-- kp and kd for rubber -->
+		<kd>100.0</kd>
+		<mu1>1.0</mu1>
+		<mu2>1.0</mu2>
+		<maxVel>1.0</maxVel>
+		<minDepth>0.00</minDepth>
+	</gazebo>
+	<gazebo reference="right_wheel_back">
+		<material>Gazebo/Green</material>
+		<kp>1000000.0</kp> <!-- kp and kd for rubber -->
+		<kd>100.0</kd>
+		<mu1>1.0</mu1>
+		<mu2>1.0</mu2>
+		<maxVel>1.0</maxVel>
+		<minDepth>0.00</minDepth>
+	</gazebo>
+	<!--<gazebo reference="right_wheel">
+		<material>Gazebo/Green</material>
+	</gazebo>-->
+
+	<gazebo reference="camera">
+		<material>Gazebo/Red</material>
+	</gazebo>
+
+	<gazebo reference="chassis">
+		<material>Gazebo/Blue</material>
+	</gazebo>
+
+	<!-- Motor, Camera and Lidar Simulation -->
+	<xacro:include filename="$(find atom)/urdf/atom.gazebo" />
+
+</robot>
