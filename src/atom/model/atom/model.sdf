@@ -1,0 +1,156 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+    <model name="atom">
+        <static>false</static>
+
+        <!-- Make Chassis of Bot -->
+        <link name="chassis">
+            <pose>0 0 0.2 0 0 0</pose>
+
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size> 0.5 0.5 0.2 </size>
+                    </box>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size> 0.5 0.5 0.2 </size>
+                    </box>
+                </geometry>
+
+            </visual>
+            
+        </link>
+
+        <!-- Right Wheel Back -->
+        <link name="right_wheel_back">
+            <pose> -0.2 0.3 0.1 0 1.5707 1.5707</pose>
+            <visual name="visual">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+        </link>
+
+        <!-- Right Wheel Front -->
+        <link name="right_wheel_front">
+            <pose> 0.2 0.3 0.1 0 1.5707 1.5707</pose>
+            <visual name="visual">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+        </link>
+
+        <!-- Left Wheel Back -->
+        <link name="left_wheel_back">
+            <pose> -0.2 -0.3 0.1 0 1.5707 1.5707</pose>
+            <visual name="visual">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+        </link>
+
+        <!-- Left Wheel Front -->
+        <link name="left_wheel_front">
+            <pose> 0.2 -0.3 0.1 0 1.5707 1.5707</pose>
+            <visual name="visual">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius> 0.1 </radius>
+                        <length>0.05</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+        </link>
+
+        <!-- Define Joints -->
+        <!-- Right Wheel Joint Back-->
+        <joint type="revolute" name="right_wheel_hinge_back">
+            <pose>0 0 0.03 0 0 0</pose>
+            <child>right_wheel_back</child>
+            <parent>chassis</parent>
+            <axis>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+
+        <!-- Right Wheel Joint Front-->
+        <joint type="revolute" name="right_wheel_hinge_front">
+            <pose>0 0 0.03 0 0 0</pose>
+            <child>right_wheel_front</child>
+            <parent>chassis</parent>
+            <axis>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+
+        <!-- Left Wheel Joint Back-->
+        <joint type="revolute" name="left_wheel_hinge_back">
+            <pose>0 0 -0.03 0 0 0</pose>
+            <child>left_wheel_back</child>
+            <parent>chassis</parent>
+            <axis>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+
+        <!-- Left Wheel Joint front-->
+        <joint type="revolute" name="left_wheel_hinge_front">
+            <pose>0 0 -0.03 0 0 0</pose>
+            <child>left_wheel_front</child>
+            <parent>chassis</parent>
+            <axis>
+                <xyz>0 1 0</xyz>
+            </axis>
+        </joint>
+
+
+    </model>
+</sdf>
