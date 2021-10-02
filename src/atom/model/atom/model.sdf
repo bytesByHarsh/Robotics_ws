@@ -33,6 +33,13 @@
                     </box>
                 </geometry>
 
+                <material>
+                    <script>
+                        <uri>model://atom/materials/scripts/repeated.material</uri>
+                        <name>Atom</name>
+                    </script>
+                </material>
+
             </visual>
             
         </link>
