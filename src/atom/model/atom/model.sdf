@@ -59,6 +59,12 @@
                         <length>0.05</length>
                     </cylinder>
                 </geometry>
+                <material> <!-- Wheel material -->
+                    <ambient>0.1 0.1 0.1 1</ambient>
+                    <diffuse>0.1 0.1 0.2 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material> <!-- End wheel material -->
             </visual>
             <collision name="collision">
                 <geometry>
@@ -68,6 +74,7 @@
                     </cylinder>
                 </geometry>
             </collision>
+            
         </link>
 
         <!-- Right Wheel Front -->
@@ -92,6 +99,12 @@
                         <length>0.05</length>
                     </cylinder>
                 </geometry>
+                <material> <!-- Wheel material -->
+                    <ambient>0.1 0.1 0.1 1</ambient>
+                    <diffuse>0.1 0.1 0.2 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material> <!-- End wheel material -->
             </visual>
             <collision name="collision">
                 <geometry>
@@ -125,6 +138,12 @@
                         <length>0.05</length>
                     </cylinder>
                 </geometry>
+                <material> <!-- Wheel material -->
+                    <ambient>0.1 0.1 0.1 1</ambient>
+                    <diffuse>0.1 0.1 0.2 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material> <!-- End wheel material -->
             </visual>
             <collision name="collision">
                 <geometry>
@@ -158,6 +177,12 @@
                         <length>0.05</length>
                     </cylinder>
                 </geometry>
+                <material> <!-- Wheel material -->
+                    <ambient>0.1 0.1 0.1 1</ambient>
+                    <diffuse>0.1 0.1 0.2 1</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material> <!-- End wheel material -->
             </visual>
             <collision name="collision">
                 <geometry>
@@ -337,7 +362,7 @@
 
             <sensor type="ray" name="head_hokuyo_sensor">
                 <pose>0 0 0 0 0 0</pose>
-                <visualize>true</visualize>
+                <visualize>false</visualize>
                 <update_rate>40</update_rate>
                 <ray>
                     <scan>
