@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="Alpha" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find Alpha_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find Alpha_description)/urdf/Alpha.trans" />
-<xacro:include filename="$(find Alpha_description)/urdf/Alpha.gazebo" />
+<xacro:include filename="$(find alpha)/urdf/materials.xacro" />
+<xacro:include filename="$(find alpha)/urdf/Alpha.trans" />
+<xacro:include filename="$(find alpha)/urdf/Alpha.gazebo" />
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-3.961964790390831e-17 0.1301754266577364 0.08991202943768775"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.25 -0.33 -0.065"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.25 -0.33 -0.065"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.25 -0.33 -0.065"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.25 -0.33 -0.065"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.2 -0.015"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.2 -0.015"/>
     <geometry>
-      <mesh filename="package://Alpha_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://alpha/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
