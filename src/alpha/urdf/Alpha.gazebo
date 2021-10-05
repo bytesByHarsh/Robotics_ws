@@ -1,7 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="Alpha" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<xacro:property name="body_color" value="Gazebo/Silver" />
+<xacro:property name="body_color" value="Gazebo/Turquoise" />
+<xacro:property name="wheel_color" value="Gazebo/Black" />
+<xacro:property name="caster_color" value="Gazebo/Blue" />
 
 <gazebo>
   <plugin filename="libgazebo_ros_control.so" name="control"/>
@@ -15,23 +17,23 @@
 </gazebo>
 
 <gazebo reference="right_wheel_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <material>${wheel_color}</material>
+  <mu1>1000.0</mu1>
+  <mu2>1000.0</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="left_wheel_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <material>${wheel_color}</material>
+  <mu1>1000.0</mu1>
+  <mu2>1000.0</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="caster_wheel_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <material>${caster_color}</material>
+  <mu1>0.01</mu1>
+  <mu2>0.01</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
