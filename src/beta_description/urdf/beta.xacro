@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<robot name="beta" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find beta_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find beta_description)/urdf/beta.trans" />
+<xacro:include filename="$(find beta_description)/urdf/beta.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.021963834758877466 -0.00016670469182376223 0.04894599334218868"/>
+    <mass value="1.9711450441063976"/>
+    <inertia ixx="0.004232" ixy="-4.2e-05" ixz="-0.000263" iyy="0.012667" iyz="2e-06" izz="0.016042"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 0.007499999999999993 6.938893903907228e-18"/>
+    <mass value="0.10956304379394399"/>
+    <inertia ixx="7.1e-05" ixy="0.0" ixz="0.0" iyy="0.000137" iyz="0.0" izz="7.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.12 -0.085 -0.05"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.12 -0.085 -0.05"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 -0.007499999999999993 6.938893903907228e-18"/>
+    <mass value="0.10956304379394399"/>
+    <inertia ixx="7.1e-05" ixy="0.0" ixz="0.0" iyy="0.000137" iyz="0.0" izz="7.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.12 0.085 -0.05"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.12 0.085 -0.05"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03 -0.06999999999999999 0.007500000000000007"/>
+    <mass value="0.011925"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 -0.075 -0.075"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 -0.075 -0.075"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.004999999999999977 0.0 0.0"/>
+    <mass value="0.00424"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 -0.0 -0.05"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 -0.0 -0.05"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pi_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00203452748026686 -0.0067540083650862795 0.007888830680915365"/>
+    <mass value="0.1347216757914449"/>
+    <inertia ixx="4.1e-05" ixy="-0.0" ixz="-9e-06" iyy="8.3e-05" iyz="0.0" izz="0.000118"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.075"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/pi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.075"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/pi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="caster_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.11 -0.075 -0.009553571428571432"/>
+    <mass value="0.21848549721086696"/>
+    <inertia ixx="3.1e-05" ixy="-0.0" ixz="0.0" iyy="3.1e-05" iyz="-0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.075 -0.025"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.075 -0.025"/>
+    <geometry>
+      <mesh filename="package://beta_description/meshes/caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.12 0.085 0.05"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_whell_joint" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.12 -0.085 0.05"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="lidar_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 0.075 0.075"/>
+  <parent link="base_link"/>
+  <child link="lidar_link_1"/>
+</joint>
+
+<joint name="camera_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.15 0.0 0.05"/>
+  <parent link="base_link"/>
+  <child link="camera_link_1"/>
+</joint>
+
+<joint name="pi_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.075"/>
+  <parent link="base_link"/>
+  <child link="pi_1"/>
+</joint>
+
+<joint name="caster_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.075 0.025"/>
+  <parent link="base_link"/>
+  <child link="caster_wheel_1"/>
+</joint>
+
+</robot>
