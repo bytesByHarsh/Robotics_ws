@@ -88,7 +88,7 @@
   </collision>
 </link>
 
-<link name="camera_link_1">
+<link name="camera">
   <inertial>
     <origin rpy="0 0 0" xyz="0.004999999999999977 0.0 0.0"/>
     <mass value="0.00424"/>
@@ -174,7 +174,7 @@
 <joint name="camera_joint" type="fixed">
   <origin rpy="0 0 0" xyz="0.15 0.0 0.05"/>
   <parent link="base_link"/>
-  <child link="camera_link_1"/>
+  <child link="camera"/>
 </joint>
 
 <joint name="pi_joint" type="fixed">
