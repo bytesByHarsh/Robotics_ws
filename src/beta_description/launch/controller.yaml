@@ -1,0 +1,15 @@
+beta_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  left_wheel_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  right_whell_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: right_whell_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
