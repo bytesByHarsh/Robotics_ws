@@ -1,8 +1,6 @@
-# PyCon-Sweden-2021
+# ROS workspace
 
-ROS workspace
-
-This repo includes smaple codes to create your own robot using ROS.
+This repository includes sample codes to create your own robot using ROS.
 
 ## Set up workspace
 
@@ -31,3 +29,10 @@ roslaunch atom gazebo_world.launch
 roslaunch beta_description gazebo.launch
 ```
 
+## Control the bot
+
+Use `teleop_twist_keyboard`
+
+```bash
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
