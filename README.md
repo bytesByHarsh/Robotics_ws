@@ -26,18 +26,28 @@ source devel/setup.sh
 ```bash
 roslaunch atom world.launch
 ```
+<p align="center">
+<img src="/docs/img/atom.JPG" alt="Atom Bot" width="600" align="center"/>
+  </p>
 
 ## Atom Robot (SDF)
 
 ```bash
 roslaunch atom gazebo_world.launch
 ```
-
+<p align="center">
+<img src="/docs/img/atom1.JPG" alt="Atom Bot" width="600" align="center"/>
+  </p>
+  
 ## Beta Robot
 
 ```bash
 roslaunch beta_description gazebo.launch
 ```
+  <p align="center">
+    <img src="/docs/img/beta.JPG" alt="Atom Bot" width="400" align="center"/>
+    <img src="/docs/img/beta1.JPG" alt="Atom Bot" width="400" align="center"/>
+  </p>
 
 ## Control the bot
 
