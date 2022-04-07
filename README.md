@@ -14,12 +14,17 @@ Replace <version> with noetic, melodic etc.
 
 ## Set up workspace
 
+
 ```bash
-git clone <repo_link>
-cd <repo_name>
+git clone https://github.com/harshmittal2210/Robotics_ws/
+cd Robotics_ws
 catkin_make
 source devel/setup.sh
 ```
+
+`Note: Do not add Robotics_ws in your catkin_ws/src`
+
+I am just using the folder name `Robotics_ws` instead of `catkin_ws`
 
 ## Atom Robot
 
@@ -64,7 +69,7 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 Twitter: [@harshmittal2210](https://twitter.com/harshmittal2210)
 Github: [@harshmittal2210](https://github.com/harshmittal2210)
-Website: [harshmittal.tech](http://harshmittal.co.in)
+Website: [harshmittal.co.in](http://harshmittal.co.in)
   
 ## 🤝 Contributing
 
