@@ -5,7 +5,7 @@
     
     <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
       <updateRate>10.0</updateRate>
-      <robotNamespace>/</robotNamespace>
+      <robotNamespace>/atom</robotNamespace>
       <leftFrontJoint>left_wheel_hinge_front</leftFrontJoint>
       <rightFrontJoint>right_wheel_hinge_front</rightFrontJoint>
       <leftRearJoint>left_wheel_hinge_back</leftRearJoint>
@@ -51,6 +51,7 @@
         </clip>
       </camera>
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <robotNamespace>/atom</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <cameraName>camera</cameraName>
@@ -100,6 +101,7 @@
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
         <topicName>/scan</topicName>
         <frameName>hokuyo</frameName>
+        <robotNamespace>/atom</robotNamespace>
       </plugin>
     </sensor>
   </gazebo>
