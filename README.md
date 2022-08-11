@@ -32,7 +32,7 @@ I am just using the folder name `Robotics_ws` instead of `catkin_ws`
 roslaunch atom world.launch
 ```
 <p align="center">
-<img src="/docs/img/atom.JPG" alt="Atom Bot" width="600"/>
+<img src="./docs/img/atom.JPG" alt="Atom Bot" width="600"/>
   </p>
 
 ## Atom Robot (SDF)
@@ -41,7 +41,7 @@ roslaunch atom world.launch
 roslaunch atom gazebo_world.launch
 ```
 <p align="center">
-<img src="/docs/img/atom1.JPG" alt="Atom Bot" width="600" />
+<img src="./docs/img/atom1.JPG" alt="Atom Bot" width="600" />
   </p>
   
 ## Beta Robot
@@ -50,9 +50,9 @@ roslaunch atom gazebo_world.launch
 roslaunch beta_description gazebo.launch
 ```
   <p align="center">
-    <img src="/docs/img/beta.JPG" alt="Atom Bot" width="400" />
-    <img src="/docs/img/beta1.JPG" alt="Atom Bot" width="400"/>
-    <img src="/docs/img/beta4.JPG" alt="Atom Bot" width="400" />
+    <img src="./docs/img/beta.JPG" alt="Atom Bot" width="400" />
+    <img src="./docs/img/beta1.JPG" alt="Atom Bot" width="400"/>
+    <img src="./docs/img/beta4.JPG" alt="Atom Bot" width="400" />
   </p>
 
 ## Control the bot
@@ -62,6 +62,10 @@ Use `teleop_twist_keyboard`
 ```bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
+
+## Autonomous Navigation
+
+Refer to doc here: [Navigation](Navigation.md)
   
 ## Author
 
