@@ -32,3 +32,19 @@ Terminal 3:
 cd <location to save map>
 rosrun map_server map_saver -f map
 ```
+
+# AMCL
+
+Terminal 1:
+
+```bash
+roslaunch atom localization.launch
+```
+
+Terminal 2:
+
+```bash
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/atom/cmd_vel
+```
+
+Now you after moving bot a little you will be able to see that it is able to localize itself properly.
