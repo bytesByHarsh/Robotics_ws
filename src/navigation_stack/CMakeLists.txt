@@ -17,6 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   tf
+  gazebo_ros
+  nav_msgs
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -109,10 +112,11 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES navigation_stack
-#  CATKIN_DEPENDS amcl dwa_local_planner gmapping map_server move_base roscpp rospy sensor_msgs tf
-#  DEPENDS system_lib
+ INCLUDE_DIRS include
+ LIBRARIES navigation_stack
+ CATKIN_DEPENDS amcl dwa_local_planner gmapping map_server move_base roscpp rospy sensor_msgs tf geometry_msgs nav_msgs gazebo_ros
+ DEPENDS system_lib
+ DEPENDS GAZEBO
 )
 
 ###########
@@ -124,7 +128,16 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS}
 )
+
+link_directories(${GAZEBO_LIBRARY_DIRS})
+
+
+
+add_executable(bot_drive src/bot_drive.cpp)
+add_dependencies(bot_drive ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(bot_drive ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

@@ -1,0 +1,12 @@
+<launch>
+
+	
+	<arg name="cmd_vel" default="/atom/cmd_vel"/>
+	<arg name="odom" default="/atom/odom"/>
+
+	<param name="cmd_vel_topic_name" value="$(arg cmd_vel)"/>
+	<param name="odom_topic_name" value="$(arg odom)"/>
+
+	<node name="bot_drive" pkg="navigation_stack" type="bot_drive" required="true" output="screen"/>
+
+</launch>

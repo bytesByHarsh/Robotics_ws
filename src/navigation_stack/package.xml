@@ -77,6 +77,11 @@
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>tf</exec_depend>
 
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>gazebo_ros</depend>
+  <exec_depend>gazebo</exec_depend>
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
