@@ -10,7 +10,7 @@ sudo apt install ros-noetic-gmapping
 # GMapping
 
 
-## Implementation
+## Mapping
 
 Terminal 1:
 
@@ -48,3 +48,14 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/atom/cmd_vel
 ```
 
 Now you after moving bot a little you will be able to see that it is able to localize itself properly.
+
+
+# Navigation
+
+Terminal 1:
+
+```bash
+roslaunch atom navigation.launch
+```
+
+Use RVIZ for 2D Navigation
