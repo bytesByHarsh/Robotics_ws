@@ -27,6 +27,7 @@ Replace <version> with noetic, melodic etc.
 ```bash
 git clone https://github.com/harshmittal2210/Robotics_ws/
 cd Robotics_ws
+git submodule update --init --recursive
 catkin_make
 source devel/setup.sh
 ```
