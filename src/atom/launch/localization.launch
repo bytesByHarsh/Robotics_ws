@@ -1,0 +1,15 @@
+<launch>
+
+	<arg name="custom_amcl_launch_file" default="$(find navigation_stack)/launch/amcl.launch"/>
+
+
+	<include file="$(find atom)/launch/house.launch"/>
+
+	<include file="$(arg custom_amcl_launch_file)">
+		<arg name="base_link_name" value="chassis"/>
+		<arg name="map_file" value="$(find atom)/../maps/aws_house/map.yaml"/>
+	</include>
+
+	<node name="rviz" pkg="rviz" type="rviz" respawn="false"
+			args="-d $(find navigation_stack)/rviz/amcl.rviz"/>
+</launch>

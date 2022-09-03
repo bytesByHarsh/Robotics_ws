@@ -1,0 +1,3 @@
+[submodule "src/aws-robomaker-small-house-world"]
+	path = src/aws-robomaker-small-house-world
+	url = https://github.com/harshmittal2210/aws-robomaker-small-house-world
