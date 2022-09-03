@@ -2,7 +2,17 @@
 
 This repository includes sample codes to create your own robot using ROS.
 
-All the bots related to my talk "Build Custom Robot in ROS" in Pycon Sweden is also added.
+All the bots related to my talk ["Build Custom Robot in ROS"](https://www.youtube.com/watch?v=cuNEOtLbB14) in [Pycon Sweden](https://www.pycon.se/) is also added.
+
+## Contents
+
+- [Prerequisites](#prerequisites)
+- [Set Up](#set-up-workspace)
+- [Atom Bot](#atom-robot)
+- [Atom SDF](#atom-robot-sdf)
+- [Beta Bot](#beta-robot)
+- [Control Bots](#control-the-bot)
+- [Autonomous Navigation](/Navigation.md)
 
 ## Prerequisites
 
