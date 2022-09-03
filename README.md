@@ -12,7 +12,7 @@ All the bots related to my talk ["Build Custom Robot in ROS"](https://www.youtub
 - [Atom SDF](#atom-robot-sdf)
 - [Beta Bot](#beta-robot)
 - [Control Bots](#control-the-bot)
-- [Autonomous Navigation](/Navigation.md)
+- [Autonomous Navigation](/docs/Navigation.md)
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 ## Autonomous Navigation
 
-Refer to doc here: [Navigation](Navigation.md)
+Refer to doc here: [Navigation](/docs/Navigation.md)
   
 ## Author
 

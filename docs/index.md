@@ -11,7 +11,7 @@ This repository includes sample codes to create your own robot using ROS.
 - [Atom SDF](#atom-robot-sdf)
 - [Beta Bot](#beta-robot)
 - [Control Bots](#control-the-bot)
-- [Autonomous Navigation](../Navigation.md)
+- [Autonomous Navigation](./Navigation.md)
 
 ## Prerequisites
 
