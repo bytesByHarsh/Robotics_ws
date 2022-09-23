@@ -112,7 +112,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- INCLUDE_DIRS include
+ #INCLUDE_DIRS include
  LIBRARIES navigation_stack
  CATKIN_DEPENDS amcl dwa_local_planner gmapping map_server move_base roscpp rospy sensor_msgs tf geometry_msgs nav_msgs gazebo_ros
  DEPENDS system_lib
