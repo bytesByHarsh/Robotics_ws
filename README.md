@@ -82,8 +82,8 @@ Refer to doc here: [Navigation](/docs/Navigation.md)
 
 👤 Harsh Mittal
 
-Twitter: [@harshmittal2210](https://twitter.com/bytesByHarsh)
-Github: [@harshmittal2210](https://github.com/bytesByHarsh)
+Twitter: [@bytesByHarsh](https://twitter.com/bytesByHarsh)
+Github: [@bytesByHarsh](https://github.com/bytesByHarsh)
 Website: [harshmittal.com](http://harshmittal.com)
   
 ## 🤝 Contributing
