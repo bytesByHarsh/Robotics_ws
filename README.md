@@ -26,7 +26,7 @@ Replace <version> with noetic, melodic etc.
 
 
 ```bash
-git clone https://github.com/harshmittal2210/Robotics_ws/
+git clone https://github.com/bytesByHarsh/Robotics_ws/
 cd Robotics_ws
 git submodule update --init --recursive
 catkin_make
@@ -82,13 +82,13 @@ Refer to doc here: [Navigation](/docs/Navigation.md)
 
 👤 Harsh Mittal
 
-Twitter: [@harshmittal2210](https://twitter.com/harshmittal2210)
-Github: [@harshmittal2210](https://github.com/harshmittal2210)
-Website: [harshmittal.co.in](http://harshmittal.co.in)
+Twitter: [@harshmittal2210](https://twitter.com/bytesByHarsh)
+Github: [@harshmittal2210](https://github.com/bytesByHarsh)
+Website: [harshmittal.com](http://harshmittal.com)
   
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 ## Show your support
 
@@ -96,5 +96,5 @@ Give a ⭐️ if you think this project is awesome!
 
 ## 📝 License
 
-Copyright © 2021 [Harsh Mittal](https://github.com/harshmittal2210).
-This project is [Apache License](https://github.com/harshmittal2210/Robotics_ws/blob/main/LICENSE) licensed.
+Copyright © 2021 [Harsh Mittal](https://github.com/bytesByHarsh).
+This project is [Apache License](https://github.com/bytesByHarsh/Robotics_ws/blob/main/LICENSE) licensed.
